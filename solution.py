@@ -11,7 +11,6 @@ def predict(data):
     result = data['col1'] + data['col2']
     return result
 
-
 def main(input_dir, output_dir):
     """ main procedure """
     df = pd.read_csv(os.path.join(input_dir, 'data.tsv'), sep='\t')
