@@ -8,7 +8,7 @@ def predict(data):
     """ get two colums from `df` and returns the predicted ouput as a column (pd.Series)
     TODO: modify it
     """
-    result = data['col1'] - data['col2']
+    result = data['col1'] + data['col2']
     return result
 
 
@@ -20,10 +20,7 @@ def main(input_dir, output_dir):
     assert isinstance(predicted_result, pd.core.series.Series), \
         f"Invalid predicted output type {type(predicted_result)}"
 
-    predicted_result.to_csv(
-        os.path.join(output_dir, 'data.predict'),
-        index=False,
-        header=False)
+    predicted_result.to_csv(os.path.join(output_dir, 'data.predict'), index=False, header=False)
 
 
 if __name__ == "__main__":
